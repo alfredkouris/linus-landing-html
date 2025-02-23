@@ -2366,8 +2366,8 @@ img {
 
 .hero_cta {
   letter-spacing: -0.05em;
-  font-weight: 300;
-  font-size: cqw;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3cqw, 3rem);
 }
 
 .hero_text {
@@ -2585,4 +2585,8 @@ img {
   gap: 15px;
   align-items: center;
   justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
 }
