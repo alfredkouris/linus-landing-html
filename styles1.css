@@ -2412,7 +2412,7 @@ img {
 
 .app-mockup.has-video {
   aspect-ratio: 9 / 18;
-  background-image: url("https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67b379a8a087431ff38580e3_iphone-only.png");
+  background-image: url("assets/iphone-layer.png");
   width: 30%;
   overflow: hidden;
 }
