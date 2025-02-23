@@ -2342,6 +2342,10 @@ img {
   border-color: currentColor !important;
   -webkit-user-select: text !important;
   user-select: text !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
 
 .field:focus {
@@ -2351,6 +2355,24 @@ img {
 
 .field::placeholder {
   color: currentColor;
+}
+
+.field:-webkit-autofill,
+.field:-webkit-autofill:hover,
+.field:-webkit-autofill:focus {
+  -webkit-text-fill-color: currentColor;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.2) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* For Firefox */
+.field:autofill {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* For Edge */
+.field:-ms-input-placeholder {
+  background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 .hero_title {
@@ -2470,7 +2492,7 @@ img {
 
   .hero_container.u-container {
     width: 100%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     margin-bottom: 50px;
   }
 
@@ -2511,7 +2533,7 @@ img {
   }
 
   .app-mockup.is-mobile {
-    max-width: 100%;
+    max-width: 70%;
   }
 
   .app-mockup.has-video.is-mobile {
