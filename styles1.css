@@ -2483,6 +2483,8 @@ img {
 
   .hero_section {
     flex-flow: column;
+    margin: 0 auto;
+    max-width: 1400px;
   }
 
   .hero_container {
