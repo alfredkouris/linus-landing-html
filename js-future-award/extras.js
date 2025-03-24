@@ -107,8 +107,8 @@ am5.ready(function () {
     },
     {
       category: "Jim Sharman grant notification (KM)",
-      fromDate: "2025-06-01",
-      toDate: "2025-06-30",
+      fromDate: "2025-05-01",
+      toDate: "2025-05-30",
       columnSettings: { fill: "#f58787" },
     },
     {
