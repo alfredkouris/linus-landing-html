@@ -7,6 +7,10 @@
   height: 600px !important;
 }
 
+.scroll-card.transform.about-us img {
+  height: 200px;
+}
+
 .collarboator {
   height: 520px !important;
 }
