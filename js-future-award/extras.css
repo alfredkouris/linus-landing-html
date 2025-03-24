@@ -11,9 +11,9 @@
   height: 200px;
 }
 
-/* .collarboator {
-  height: 520px !important;
-} */
+.collarboator img {
+  height: 200px !important;
+}
 
 .chart-container {
   border-radius: 20px;
