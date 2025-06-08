@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Sun Mar 23 2025 22:38:14 GMT+0000 (Coordinated Universal Time) -->
+<html
+  data-wf-domain="alfred-and-cal-change-the-world.webflow.io"
+  data-wf-page="67d7920fe8facb265f261ba3"
+  data-wf-site="67b354a94f54fe7316701d41"
+  data-wf-status="1"
+  lang="en"
+  data-wf-locale="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Award Application</title>
+    <meta content="JS Award Application" property="og:title" />
+    <meta content="JS Award Application" property="twitter:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link href="styles1.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        (n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch");
+      })(window, document);
+    </script>
+    <link
+      href="https://getlinus.app/assets/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.prod.website-files.com/img/webclip.png"
+      rel="apple-touch-icon"
+    />
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <link href="extras.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body style="background-color: rgb(234, 234, 234)" class="body-grant-lp">
+    <div class="copy-me">
+      <div class="remove-flicker w-embed w-script">
+        <!-- This hides your tooltips on publish. Handy if you like to keep them visible in the designer -->
+        <style>
+          .tooltip-anchor {
+            display: none;
+          }
+        </style>
+
+        <!-- This prevents elements from being hidden until after Webflow publishes -->
+        <script></script>
+      </div>
+      <div class="custom-styles w-embed">
+        <style>
+          html {
+            font-size: calc(0.625rem + 0.41666666666666663vw);
+          }
+
+          @media screen and (max-width: 1920px) {
+            html {
+              font-size: calc(0.625rem + 0.41666666666666674vw);
+            }
+          }
+
+          @media screen and (max-width: 1440px) {
+            html {
+              font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+            }
+          }
+
+          @media screen and (max-width: 479px) {
+            html {
+              font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+            }
+          }
+
+          * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+          }
+
+          :root {
+            --bg-color: rgb(20, 20, 20);
+            --card-color: rgb(23, 23, 23);
+          }
+
+          .hero {
+            background: radial-gradient(
+              ellipse 80% 50% at 50% -20%,
+              rgba(120, 119, 198, 0.1),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          #cards:hover > .card::after {
+            opacity: 1;
+          }
+
+          .card:hover::before {
+            opacity: 1;
+          }
+
+          .card::before,
+          .card::after {
+            border-radius: inherit;
+            content: "";
+            height: 100%;
+            left: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            transition: opacity 500ms;
+            width: 100%;
+          }
+
+          .card::before {
+            background: radial-gradient(
+              800px circle at var(--mouse-x) var(--mouse-y),
+              rgba(255, 255, 255, 0.06),
+              transparent 40%
+            );
+            z-index: 3;
+          }
+
+          .card::after {
+            background: radial-gradient(
+              600px circle at var(--mouse-x) var(--mouse-y),
+              rgba(255, 255, 255, 0.4),
+              transparent 40%
+            );
+            z-index: 1;
+          }
+
+          .card > .card-content {
+            background-color: var(--card-color);
+            border-radius: inherit;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            inset: 1px;
+            padding: 10px;
+            position: absolute;
+            z-index: 2;
+          }
+        </style>
+      </div>
+    </div>
+    <div class="mob-warning">
+      <img
+        src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7d3d067e7e098cde3775f_desktop.png"
+        loading="lazy"
+        sizes="(max-width: 512px) 100vw, 512px"
+        srcset="
+          https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7d3d067e7e098cde3775f_desktop-p-500.png 500w,
+          https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7d3d067e7e098cde3775f_desktop.png       512w
+        "
+        alt=""
+        class="image-14"
+      />
+      <h5 class="heading-2">
+        For the best experience, open this on a browser or increase your browser
+        width.
+      </h5>
+    </div>
+    <section style="opacity: 1" class="hero-opener opener">
+      <div class="max-width-xlarge">
+        <div class="margin-bottom-medium">
+          <p class="opener-title">
+            When your scene partner isn&rsquo;t available,
+            <span>Linus</span> is.
+          </p>
+        </div>
+      </div>
+      <div class="div-block-2">
+        <div class="max-width-medium margin-bottom-xlarge">
+          <p class="text-colour-white text-align-center opener-text">
+            Actors scramble for last-minute readers, rely on unresponsive apps,
+            and settle for voice memos. Scripts arrive at the eleventh hour,
+            auditions demand brilliance, and actors prepare alone&mdash;yet
+            performances must feel alive.<br /><br />This happens every day.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />It's
+            2025.<br />Let's lead the arts into a new era.<br /><br />&zwj;
+          </p>
+        </div>
+        <a
+          data-w-id="7490ec09-cd3c-906e-8d19-aae2d640a30d"
+          style="
+            -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+              rotateY(0) rotateZ(0) skew(0, 0);
+            -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+              rotateY(0) rotateZ(0) skew(0, 0);
+            -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+              rotateY(0) rotateZ(0) skew(0, 0);
+            transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+              rotateY(0) rotateZ(0) skew(0, 0);
+          "
+          href="#"
+          class="button button-inverted w-button"
+          >SHAPE THE FUTURE</a
+        >
+      </div>
+      <div class="overlay text-colour-lightgrey">
+        <h3 class="lp-h3">Linus</h3>
+        <h4 class="lp-h4">Elevenlabs Startup Grant</h4>
+      </div>
+      <div class="overlay text-colour-lightgrey bottom-credit"></div>
+    </section>
+    <div style="display: none; opacity: 0" class="body-2">
+      <header
+        data-w-id="b3088911-6abe-c653-b230-a8361be37248"
+        class="section_sb-header"
+      >
+        <div class="padding-section-large is-hero">
+          <div class="page-padding">
+            <div class="container-large">
+              <div
+                data-w-id="b3088911-6abe-c653-b230-a8361be3724c"
+                class="sb-header_component"
+              >
+                <div class="margin-bottom margin-xxlarge">
+                  <div class="text-align-center">
+                    <div class="max-width-xlarge">
+                      <div class="margin-bottom margin-small">
+                        <h1 class="heading-xhuge margin-bottom-large">
+                          When your scene partner <br />isn't available,
+                          <span
+                            data-w-id="4576d585-ed16-8f98-9057-5e487e1cf9f2"
+                            class="sb-header-ai-text"
+                            >Linus&nbsp;</span
+                          ><span
+                            data-w-id="a77278a4-c450-e13c-9131-4027a513b844"
+                            class="sb-header-ai-text"
+                            >is.</span
+                          >
+                        </h1>
+                      </div>
+                      <div class="max-width-medium">
+                        <p class="text-size-large text-align-left">
+                          <strong>Our Big Idea<br /><br />&zwj;</strong>The
+                          first AI-powered rehearsal partner. <br /><br />More
+                          than a line-learning tool, it reacts at near-human
+                          speed to provide a true reader-like experience when
+                          actors have no other choice.<br /><br />Linus restores
+                          the natural flow of live rehearsal&mdash;no more
+                          fumbling with play/pause buttons or rigid playback.
+                          Unlike static apps, Linus listens, reacts, and moves
+                          with the actor. It tracks rhythm, intent, and energy
+                          of the scene. <br /><br />If an actor paraphrases,
+                          skips a word, or shifts pacing, Linus
+                          responds&mdash;keeping momentum alive. It takes
+                          direction instantly; adjusting tone, speed, and
+                          delivery based on performance notes.&nbsp;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-w-id="b3088911-6abe-c653-b230-a8361be3726e"
+            class="sb-header_bottom-wrapper"
+          >
+            <div class="page-padding z-index-1">
+              <div class="container-large">
+                <div class="margin-bottom-small">
+                  <h3 class="heading-small">See the prototype in action</h3>
+                </div>
+                <a
+                  href="#"
+                  data-w-id="b3088911-6abe-c653-b230-a8361be37271"
+                  class="sb-header_image-wrapper w-inline-block w-lightbox"
+                  ><img
+                    sizes="(max-width: 1919px) 100vw, 1920px"
+                    srcset="
+                      https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67db77fa88b94243e6c67b72_Linus%20Demo-p-500.jpg   500w,
+                      https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67db77fa88b94243e6c67b72_Linus%20Demo-p-800.jpg   800w,
+                      https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67db77fa88b94243e6c67b72_Linus%20Demo-p-1080.jpg 1080w,
+                      https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67db77fa88b94243e6c67b72_Linus%20Demo.jpg        1920w
+                    "
+                    alt=""
+                    src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67db77fa88b94243e6c67b72_Linus%20Demo.jpg"
+                    loading="lazy"
+                    class="sb-header_image"
+                  /><img
+                    loading="lazy"
+                    src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d79b8e09c0d13eda13b567_play_circle.svg"
+                    alt=""
+                    class="sb-header_play-button"
+                  />
+                  <script type="application/json" class="w-json">
+                    {
+                      "items": [
+                        {
+                          "url": "https://youtube.com/watch?v=s_NRhw7y6zk",
+                          "originalUrl": "https://youtube.com/watch?v=s_NRhw7y6zk",
+                          "width": 940,
+                          "height": 528,
+                          "html": "<iframe class=\"embedly-embed\" src=\"//cdn.embedly.com/widgets/media.html?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Ds_NRhw7y6zk&type=text%2Fhtml&schema=youtube&display_name=YouTube&src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fs_NRhw7y6zk%3Ffeature%3Doembed\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen; encrypted-media; picture-in-picture;\" allowfullscreen=\"true\">",
+                          "type": "video"
+                        }
+                      ],
+                      "group": ""
+                    }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="section_dynamic-marquee margin-bottom-large">
+        <div class="margin-bottom-medium">
+          <h2 class="label is-center-aligned margin-bottom-small">
+            SAY ALL OF THIS
+          </h2>
+          <div
+            data-w-id="cbe2de5e-d173-cbc2-bb2c-663d411d3421"
+            class="marquee_wrap_left left"
+          >
+            <div class="dynamic-marquee_logos w-dyn-list">
+              <div role="list" class="dynamic-marquee_logo-list w-dyn-items">
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can you play your first line a little faster?</div>
+                  </div>
+                  <div class="linus-answer">
+                    Easy i'll just speed that up a little.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>I'm ready. Let's go for a take.</div>
+                  </div>
+                  <div class="linus-answer">Camera is rolling.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can we run that again from the top?</div>
+                  </div>
+                  <div class="linus-answer">Of course.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Add a beat after my line 'price is too high'. A few
+                      seconds.
+                    </div>
+                  </div>
+                  <div class="linus-answer">I've added it.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I need a sound effect of a door slamming to start the
+                      scene.
+                    </div>
+                  </div>
+                  <div class="linus-answer">Great, i'll add that in.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Prompt. Line. What's my line? What's my line I always
+                      forget this one?
+                    </div>
+                  </div>
+                  <div class="linus-answer">I got you.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Let's improvise what happens before the scene begins
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure - you start and i'll follow.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I keep getting stuck on this line, can you help me learn
+                      it?
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure. Why don't we break it down into images?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dynamic-marquee_logos w-dyn-list">
+              <div role="list" class="dynamic-marquee_logo-list w-dyn-items">
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>Can you play your first line a little faster?</div>
+                  <div class="linus-answer">
+                    Easy i'll just speed that up a little.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>I'm ready. Let's go for a take.</div>
+                  <div class="linus-answer">Camera is rolling.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>Can we run that again from the top?</div>
+                  <div class="linus-answer">Of course.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>
+                    Add a beat after my line 'price is too high'. A few seconds.
+                  </div>
+                  <div class="linus-answer">I've added it.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>
+                    I need a sound effect of a door slamming to start the scene.
+                  </div>
+                  <div class="linus-answer">Great, i'll add that in.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>
+                    Prompt. Line. What's my line? What's my line I always forget
+                    this one?
+                  </div>
+                  <div class="linus-answer">I got you.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>
+                    Let's improvise what happens before the scene begins
+                  </div>
+                  <div class="linus-answer">
+                    Sure - you start and i'll follow.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div>
+                    I keep getting stuck on this line, can you help me learn it?
+                  </div>
+                  <div class="linus-answer">
+                    Sure. Why don't we break it down into images?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="marquee_wrap_left right">
+            <div class="dynamic-marquee_logos w-dyn-list">
+              <div role="list" class="dynamic-marquee_logo-list w-dyn-items">
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can you play your first line a little faster?</div>
+                  </div>
+                  <div class="linus-answer">
+                    Easy i'll just speed that up a little.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>I'm ready. Let's go for a take.</div>
+                  </div>
+                  <div class="linus-answer">Camera is rolling.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can we run that again from the top?</div>
+                  </div>
+                  <div class="linus-answer">Of course.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Add a beat after my line 'price is too high'. A few
+                      seconds.
+                    </div>
+                  </div>
+                  <div class="linus-answer">I've added it.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I need a sound effect of a door slamming to start the
+                      scene.
+                    </div>
+                  </div>
+                  <div class="linus-answer">Great, i'll add that in.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Prompt. Line. What's my line? What's my line I always
+                      forget this one?
+                    </div>
+                  </div>
+                  <div class="linus-answer">I got you.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Let's improvise what happens before the scene begins
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure - you start and i'll follow.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I keep getting stuck on this line, can you help me learn
+                      it?
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure. Why don't we break it down into images?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dynamic-marquee_logos w-dyn-list">
+              <div role="list" class="dynamic-marquee_logo-list w-dyn-items">
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can you play your first line a little faster?</div>
+                  </div>
+                  <div class="linus-answer">
+                    Easy i'll just speed that up a little.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>I'm ready. Let's go for a take.</div>
+                  </div>
+                  <div class="linus-answer">Camera is rolling.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>Can we run that again from the top?</div>
+                  </div>
+                  <div class="linus-answer">Of course.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Add a beat after my line 'price is too high'. A few
+                      seconds.
+                    </div>
+                  </div>
+                  <div class="linus-answer">I've added it.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I need a sound effect of a door slamming to start the
+                      scene.
+                    </div>
+                  </div>
+                  <div class="linus-answer">Great, i'll add that in.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Prompt. Line. What's my line? What's my line I always
+                      forget this one?
+                    </div>
+                  </div>
+                  <div class="linus-answer">I got you.</div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      Let's improvise what happens before the scene begins
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure - you start and i'll follow.
+                  </div>
+                </div>
+                <div role="listitem" class="logo w-dyn-item">
+                  <div class="div-block-3">
+                    <div>
+                      I keep getting stuck on this line, can you help me learn
+                      it?
+                    </div>
+                  </div>
+                  <div class="linus-answer">
+                    Sure. Why don't we break it down into images?
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section_features">
+        <h2 class="label is-center-aligned margin-bottom-small">
+          TECHNOLOGY BUILT FOR ACTORS
+        </h2>
+        <div class="container-large">
+          <div class="scroll-inner">
+            <div
+              data-w-id="e24fecf9-e75f-306d-2d40-32d3377048c2"
+              style="
+                -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="scroll-card"
+            >
+              <div class="content-wrapper-2">
+                <img
+                  loading="lazy"
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dcdcec0ce1a5034206c991_wmremove-transformed.png"
+                  alt=""
+                  class="full-image"
+                />
+                <div class="text-wrapper">
+                  <h3 class="heading-4">ActorVoice&trade;</h3>
+                  <div class="description">
+                    State of the art real-time voice technologies across
+                    multiple accents and languages make near human-speed voices
+                    tailored to the context of the scene.
+                  </div>
+                </div>
+                <div
+                  style="height: 100%; opacity: 0"
+                  class="grow-background"
+                ></div>
+              </div>
+            </div>
+            <div
+              data-w-id="484497d4-09d9-49c8-1663-3b84cc423016"
+              style="
+                -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="scroll-card"
+            >
+              <div class="content-wrapper-2">
+                <img
+                  loading="lazy"
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dcdcec0ce1a5034206c991_wmremove-transformed.png"
+                  alt=""
+                  class="full-image"
+                />
+                <div class="text-wrapper">
+                  <h3 class="heading-4">
+                    <strong>The Linus Engine&trade;</strong>
+                  </h3>
+                  <div class="description">
+                    An AI model trained on real self-tape rehearsals which
+                    listens, responds and makes decisions as a real reader
+                    would.
+                  </div>
+                </div>
+                <div
+                  style="height: 100%; opacity: 0"
+                  class="grow-background"
+                ></div>
+              </div>
+            </div>
+            <div
+              data-w-id="22172209-56dc-bebc-fcc3-beb999cbac36"
+              style="
+                -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="scroll-card"
+            >
+              <div class="content-wrapper-2">
+                <img
+                  loading="lazy"
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dcdcec0ce1a5034206c991_wmremove-transformed.png"
+                  alt=""
+                  class="full-image"
+                />
+                <div class="text-wrapper">
+                  <h3 class="heading-4"><strong>SceneMind&trade;</strong></h3>
+                  <div class="description">
+                    Linus not only imports any script, it understands the
+                    emotional beats, power dynamics, and intent; keeping
+                    responses true to meaning.
+                  </div>
+                </div>
+                <div
+                  style="height: 100%; opacity: 0"
+                  class="grow-background"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section_features-0">
+        <div class="rl-page-padding">
+          <div class="container-large">
+            <div class="padding-bottom padding-xxhuge">
+              <div class="max-width-large text-align-center">
+                <div class="rich-text-block problem-heading w-richtext">
+                  <h3>
+                    <strong class="heading-bold"
+                      >Built for the reality of <br />an Actor&rsquo;s
+                      Life</strong
+                    >
+                  </h3>
+                  <p>&zwj;</p>
+                  <p>
+                    <strong
+                      >Auditioning, performing, and building a career has
+                      evolved for actors, but rehearsal? It&rsquo;s been left
+                      behind...</strong
+                    >
+                  </p>
+                  <p>&zwj;</p>
+                  <p>
+                    Over the past six months, 33 actors&mdash;including BAFTA,
+                    AACTA, and Olivier Award honorees&mdash;have shaped the
+                    Linus prototype.
+                  </p>
+                  <p>&zwj;</p>
+                  <p>Their frustrations?</p>
+                </div>
+                <div class="page-wrapper-2">
+                  <div class="section_featuresv6">
+                    <div class="padding-global">
+                      <div class="container-large">
+                        <div class="padding-section-large-2">
+                          <div
+                            class="_2x1-grid-layout is-top-aligned max-width-medium"
+                          >
+                            <div
+                              id="w-node-_5f64ae1e-cb3e-4add-f030-648dd73aedb9-5f261ba3"
+                              class="featuresv6_sticky-container"
+                            >
+                              <div
+                                data-w-id="5f64ae1e-cb3e-4add-f030-648dd73aedba"
+                                class="featuresv6_sticky-div"
+                              >
+                                <h3 class="text-weight-regular">91%</h3>
+                                <h3 class="text-weight-regular">
+                                  <span class="text-span"
+                                    >struggle with line-learning tools that
+                                    don&rsquo;t work.</span
+                                  >
+                                </h3>
+                              </div>
+                              <div
+                                data-w-id="5f64ae1e-cb3e-4add-f030-648dd73aedbf"
+                                class="featuresv6_sticky-div is-second"
+                              >
+                                <h3 class="text-weight-regular">89%</h3>
+                                <h3 class="text-weight-regular">
+                                  <span class="text-span"
+                                    >can&rsquo;t secure a reader when they need
+                                    one.</span
+                                  >
+                                </h3>
+                              </div>
+                              <div
+                                data-w-id="5f64ae1e-cb3e-4add-f030-648dd73aedc4"
+                                class="featuresv6_sticky-div is-third"
+                              >
+                                <h3 class="text-weight-regular">
+                                  <span>87%</span>
+                                </h3>
+                                <h3 class="text-weight-regular">
+                                  <span class="text-span"
+                                    >feel performance anxiety when under time
+                                    pressure.</span
+                                  >
+                                </h3>
+                              </div>
+                              <div
+                                data-w-id="5f64ae1e-cb3e-4add-f030-648dd73aedc9"
+                                class="featuresv6_sticky-div is-fourth"
+                              >
+                                <h3>Their message was clear</h3>
+                                <h3
+                                  class="text-weight-regular margin-bottom-small"
+                                >
+                                  <span class="text-span"
+                                    >"It&rsquo;s not that I don&rsquo;t know how
+                                    to rehearse&mdash;it&rsquo;s that I
+                                    don&rsquo;t have the resources.&rdquo;</span
+                                  >
+                                </h3>
+                                <p>
+                                  Linus restores the conditions actors need
+                                  to<br />
+                                  prepare at the highest level.<br />
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rich-text-block problem-heading w-richtext">
+                  <p>&zwj;</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_features-1">
+        <div class="rl-page-padding">
+          <div class="container-large">
+            <div class="padding-bottom padding-xxhuge">
+              <div class="text-align-center">
+                <div class="margin-bottom max-width-large text-align-center">
+                  <div>
+                    <h2 class="heading-huge margin-bottom-small">
+                      How we will transform the arts
+                    </h2>
+                    <p class="text-align-left">
+                        With Eleven Labs’ support, we will have the capacity to push our rehearsal technology into its next era. Helping us enable better rehearsals, better preparation, and better performances for actors globally.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="sectoin_transform-features">
+                <h2 class="label is-center-aligned margin-bottom-small">
+                  How this grant will assist us<br />
+                </h2>
+                <div class="container-large">
+                  <div class="scroll-inner transform">
+                    <div class="scroll-card transform">
+                      <div class="content-wrapper-2">
+                        <img
+                          loading="lazy"
+                          src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dd0d10bfc626df830d80aa_1.%20help.png"
+                          alt=""
+                          class="full-image"
+                        />
+                        <div class="text-wrapper">
+                          <h3 class="heading-4">
+                            <strong
+                              >Empowering actors when it matters most</strong
+                            >
+                          </h3>
+                          <div class="rich-text-block-2 w-richtext">
+                            <p>
+                              Linus will give actors access to a reader so they
+                              can focus on their performance.
+                            </p>
+                            <p>&zwj;</p>
+                            <p><strong>No more:</strong></p>
+                            <ul role="list">
+                              <li>Scrambling for last-minute readers</li>
+                              <li>Solo rehearsals that create disconnection</li>
+                              <li>
+                                Missed opportunities due to lack of resources
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="grow-background"></div>
+                      </div>
+                    </div>
+                    <div class="scroll-card transform">
+                      <div class="content-wrapper-2">
+                        <img
+                          loading="lazy"
+                          src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dd0d04e0426b0832eb7605_2.%20access.png"
+                          alt=""
+                          class="full-image"
+                        />
+                        <div class="text-wrapper">
+                          <h3 class="heading-4">
+                            <strong>Expanding access to artistic tools</strong>
+                          </h3>
+                        </div>
+                        <div class="grow-background"></div>
+                        <div class="rich-text-block-2 w-richtext">
+                          <p>
+                            Linus will provide all artists with access to high
+                            quality, meaningful preparation.
+                          </p>
+                          <p>&zwj;</p>
+                          <p>
+                            <strong
+                              >Linus expands accessibility through:</strong
+                            >
+                          </p>
+                          <ul role="list">
+                            <li>Voice-activated taping</li>
+                            <li>
+                              Script assistance for neurodiverse performers
+                            </li>
+                            <li>Real-time translation tools</li>
+                            <li>
+                              Collaborating with CALD artists, disabled
+                              performers, and regional creatives to (develop
+                              features that) enhance usability and
+                              inclusiveness.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="scroll-card transform">
+                      <div class="content-wrapper-2">
+                        <img
+                          loading="lazy"
+                          src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dd0d05bc2c191bd8e78ed1_3.%20tech.png"
+                          alt=""
+                          class="full-image"
+                        />
+                        <div class="text-wrapper">
+                          <h3 class="heading-4">
+                            <strong>Creating actor-centric technology</strong>
+                          </h3>
+                          <div class="rich-text-block-2 w-richtext">
+                            <p>
+                              Linus will use AI&nbsp;ethically in a way that is
+                              built for actors, not to replace them.
+                            </p>
+                          </div>
+                          <div class="rich-text-block-2 w-richtext">
+                            <p>
+                              <strong>That&rsquo;s why we&rsquo;re:</strong>
+                            </p>
+                            <ul role="list">
+                              <li>
+                                Partnering with the Casting Guild of
+                                Australia&rsquo;s AI &amp; New Media Committee
+                              </li>
+                              <li>
+                                Consulting copyright and legal firms to ensure
+                                ethical use and protection
+                              </li>
+                              <li>
+                                Collaborating with industry leaders to align
+                                Linus with real-world needs
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="grow-background"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-block-4 max-width-large text-align-center">
+                <h2 class="label is-center-aligned margin-bottom-tiny">
+                  at all career stages<br />
+                </h2>
+                <div
+                  data-w-id="81aa5906-3a0f-97fc-f462-98a0099c1599"
+                  class="w-layout-grid grid"
+                >
+                  <div
+                    id="w-node-_81aa5906-3a0f-97fc-f462-98a0099c159a-5f261ba3"
+                    class="builder_feature-card feature-7 fixed-w"
+                  >
+                    <div class="builder_feature-top fixed-w">
+                      <div class="text-align-center max-width-xsmall">
+                        <p class="text-color-darkgrey">
+                          Self-taping from a hotel whilst traveling
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="builder_feature-card feature-7 fixed-w">
+                    <div class="builder_feature-top fixed-w">
+                      <div class="text-align-center max-width-xsmall">
+                        <p class="text-color-darkgrey">
+                          A final speed run before a theatre debut
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-_81aa5906-3a0f-97fc-f462-98a0099c15a2-5f261ba3"
+                    class="builder_feature-card fixed-w"
+                  >
+                    <div class="builder_feature-top fixed-w">
+                      <div class="text-align-center max-width-xsmall">
+                        <p class="text-color-darkgrey">
+                          Prepping for a pivotal scene on set in Budapest
+                        </p>
+                      </div>
+                    </div>
+                    <div class="builder_feature-bottom feature-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_features-2">
+        <div class="rl-page-padding">
+          <div class="container-large">
+            <div class="padding-bottom padding-xxhuge">
+              <div class="margin-bottom">
+                <div class="max-width-large text-align-center">
+                  <h2 class="heading-huge margin-bottom-small">
+                    How we will <br />use the funds
+                  </h2>
+                  <p class="text-align-left">
+                    With Eleven Labs’ support, we will push rehearsal technology into its next era. Helping us develop better rehearsals, better preparation, and better performances for actors globally.
+                  </p>
+                </div>
+                <div class="text-align-center">
+                  <div class="max-width-medium align-center"></div>
+                </div>
+              </div>
+              <div class="container-large card-with-padding">
+                <div class="margin-bottom margin-xsmall">
+                  <h3 class="font-medium">
+                    Funds from the Jim Sharman Award will go towards
+                  </h3>
+                </div>
+                <div
+                  data-w-id="29b113ed-a9bc-035b-70db-4f961f43b27d"
+                  class="w-layout-grid builder_feature-grid-6"
+                >
+                  <div
+                    id="w-node-_29b113ed-a9bc-035b-70db-4f961f43b27e-5f261ba3"
+                    class="builder_feature-card feature-7"
+                  >
+                    <div class="builder_feature-top">
+                      <div class="text-align-center max-width-xsmall">
+                        <div class="margin-bottom margin-xsmall">
+                          <h3 class="heading-large">
+                            AI Training &amp; Development
+                          </h3>
+                        </div>
+                        <p class="text-color-darkgrey">
+                          Hiring AI experts to develop The Linus Engine&trade;.
+                          We've pushed our prototype as far as possible with
+                          off-the-shelf AI.<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-_29b113ed-a9bc-035b-70db-4f961f43b2aa-5f261ba3"
+                    class="builder_feature-card"
+                  >
+                    <div class="builder_feature-top">
+                      <div class="text-align-center max-width-xsmall">
+                        <div class="margin-bottom margin-xsmall">
+                          <h3 class="heading-large">
+                            User Experience &amp; User Interface Design
+                          </h3>
+                        </div>
+                        <p class="text-color-darkgrey">
+                          Designing a seamless user experience that makes sense
+                          for actors. Doing this to our standard requires
+                          support from a User Experience expert.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="builder_feature-bottom feature-8"></div>
+                  </div>
+                  <div
+                    id="w-node-_29b113ed-a9bc-035b-70db-4f961f43b2d2-5f261ba3"
+                    class="builder_feature-card feature-9"
+                  >
+                    <div class="builder_feature-top feature-11">
+                      <div class="text-align-center max-width-xsmall">
+                        <div class="margin-bottom margin-xsmall">
+                          <h3 class="heading-large">
+                            Testing &amp; Performance Optimisation
+                          </h3>
+                        </div>
+                        <p class="text-color-darkgrey">
+                          Supporting our Beta group test process. The rehearsal
+                          experience must feel real and we need insight to get
+                          this right.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="builder_feature-bottom feature-9 hide"></div>
+                  </div>
+                  <div
+                    id="w-node-_29b113ed-a9bc-035b-70db-4f961f43b31a-5f261ba3"
+                    class="builder_feature-card feature-10"
+                  >
+                    <div class="builder_feature-top feature-11">
+                      <div class="text-align-center max-width-xsmall">
+                        <div class="margin-bottom margin-xsmall">
+                          <h3 class="heading-large">
+                            Ethical AI, Legal &amp; Compliance
+                          </h3>
+                        </div>
+                        <p class="text-color-darkgrey">
+                          Protecting both actors and production companies.
+                          Seeking legal advice on copyright, confidentiality and
+                          IP is a priority for us.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="builder_feature-bottom feature-10 hide"></div>
+                  </div>
+                  <div
+                    id="w-node-_29b113ed-a9bc-035b-70db-4f961f43b34a-5f261ba3"
+                    class="builder_feature-card feature-11"
+                  >
+                    <div class="builder_feature-top feature-11">
+                      <div class="max-width-xsmall">
+                        <div class="margin-bottom margin-xsmall">
+                          <h3 class="heading-large">
+                            Marketing, Brand &amp;&nbsp;Us
+                          </h3>
+                        </div>
+                        <p class="text-color-darkgrey">
+                          Making sure people can see Linus' value and our time
+                          is valued too. Think Socials, Website, Ads&nbsp;(and a
+                          minimum wage).
+                        </p>
+                      </div>
+                    </div>
+                    <div class="builder_feature-bottom feature-11 hide"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-section">
+                <div class="margin-bottom margin-xsmall">
+                  <h3 class="heading-small">Detailed Budget</h3>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-tab-button">
+                    <div class="arrow-div-wrapper"></div>
+                    <h2 class="heading-large accordion-heading">Income</h2>
+                  </div>
+                  <div class="accordion-pane">
+                    <div class="accordion-pane-content">
+                      <div class="table-wrapper medium rankings">
+                        <div class="table no-pad overflow">
+                          <div class="table-row-3-col header wide">
+                            <div class="table-col header left-col">
+                              <div class="table-1---header---text">Income</div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text">Amount</div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div
+                                class="table-1---header---text data center bold-text"
+                              >
+                                Jim Sharman Future Award
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div
+                                class="table-1---header---text data center bold-text"
+                              >
+                                $ 50,000.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Personal&nbsp;Contribution (Alfred)
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 24,061.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Personal&nbsp;Contribution (Callan)
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 24,061.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide feature">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-2"
+                                  >Total Income</strong
+                                >
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-3">$ 98,122.00</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-pane-content"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-tab-button">
+                    <div class="arrow-div-wrapper"></div>
+                    <h1 class="heading-large accordion-heading">Expenses</h1>
+                  </div>
+                  <div class="accordion-pane">
+                    <div class="accordion-pane-content">
+                      <div class="table-wrapper medium rankings">
+                        <div class="table no-pad overflow">
+                          <div class="table-row-3-col header wide">
+                            <div class="table-col header left-col">
+                              <div class="table-1---header---text">
+                                Expenses
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text">Amount</div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Team Remuneration
+                              </div>
+                              <div
+                                data-delay="0"
+                                data-hover="true"
+                                class="tooltip-dropdown inline w-dropdown"
+                              >
+                                <div class="tooltip-content w-dropdown-toggle">
+                                  <div class="tooltip-i">i</div>
+                                </div>
+                                <nav class="tooltip-anchor top w-dropdown-list">
+                                  <div
+                                    data-cy="step5"
+                                    class="tooltip-wrapper _200"
+                                  >
+                                    <div class="tooltip-container _10">
+                                      <div class="relative">
+                                        Flat rate of $10,921 each for Callan
+                                        &amp; Alfred - this includes 22.5% for
+                                        superannuation and employee taxes and
+                                        covers their involvement throughout the
+                                        duration of this project.<br />
+                                      </div>
+                                    </div>
+                                    <div class="tooltip-diamond bottom"></div>
+                                  </div>
+                                </nav>
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 21,842.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Video Production
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 3,250.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                React Native App Development
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 12,166.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Project Setup &amp; Architecture Design
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 1,659.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                AI Integration &amp; Fine-Tuning (LLM)
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 8,571.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Text-to-Speech (TTS) &amp; Conversational AI
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 8,295.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Real-Time Voice &amp; Video API Implementation
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 8,848.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Backend Development (API &amp; Database)
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 10,507.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Frontend UI/UX Design &amp; Implementation
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 8,848.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Testing &amp; QA (Automated &amp; Manual)
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 6,636.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Equipment &amp; Software
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 2,000.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Legal, Administrative &amp; Compliance
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 5,500.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide feature">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-2"
+                                  >Total Expenses</strong
+                                >
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-3">$ 98,122.00</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-tab-button">
+                    <div class="arrow-div-wrapper"></div>
+                    <h1
+                      class="heading-large accordion-heading margin-bottom-medium"
+                    >
+                      In-Kind Income/Expenses
+                    </h1>
+                  </div>
+                  <div class="accordion-pane">
+                    <div class="accordion-pane-content">
+                      <div class="table-wrapper medium rankings">
+                        <div class="table no-pad overflow">
+                          <div class="table-row-3-col header wide">
+                            <div class="table-col header left-col">
+                              <div class="table-1---header---text">
+                                In Kind Income/Expenses
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text">Amount</div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                ElevenLabs Startup Grant
+                              </div>
+                              <div
+                                data-delay="0"
+                                data-hover="true"
+                                class="tooltip-dropdown inline w-dropdown"
+                              >
+                                <div class="tooltip-content w-dropdown-toggle">
+                                  <div class="tooltip-i">i</div>
+                                </div>
+                                <nav class="tooltip-anchor top w-dropdown-list">
+                                  <div
+                                    data-cy="step5"
+                                    class="tooltip-wrapper _200"
+                                  >
+                                    <div class="tooltip-container _10">
+                                      <div class="relative">
+                                        The ElevenLabs Grant provides in-kind
+                                        income through 3 months of free access
+                                        to AI voice generation, including
+                                        11,000,000 characters per month. This
+                                        grant offers a value equivalent to the
+                                        cost of the service during this period,
+                                        reducing the overall expenses related to
+                                        AI audio generation.<br />
+                                      </div>
+                                    </div>
+                                    <div class="tooltip-diamond bottom"></div>
+                                  </div>
+                                </nav>
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 6,229.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Google Cloud &ndash; Introductory Credit
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 482.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Brand Strategy &amp; Identity
+                              </div>
+                              <div
+                                data-delay="0"
+                                data-hover="true"
+                                class="tooltip-dropdown inline w-dropdown"
+                              >
+                                <div class="tooltip-content w-dropdown-toggle">
+                                  <div class="tooltip-i">i</div>
+                                </div>
+                                <nav class="tooltip-anchor top w-dropdown-list">
+                                  <div
+                                    data-cy="step5"
+                                    class="tooltip-wrapper _200"
+                                  >
+                                    <div class="tooltip-container _10">
+                                      <div class="relative">
+                                        Branding&nbsp;Strategy
+                                        &amp;&nbsp;Identity to be created by the
+                                        Linus team (Alfred
+                                        &amp;&nbsp;Callan).&nbsp;They both bring
+                                        skills from running an online business
+                                        &amp; a digital agency.<br />
+                                      </div>
+                                    </div>
+                                    <div class="tooltip-diamond bottom"></div>
+                                  </div>
+                                </nav>
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 5,500.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Website Design &amp; Development
+                              </div>
+                              <div
+                                data-delay="0"
+                                data-hover="true"
+                                class="tooltip-dropdown inline w-dropdown"
+                              >
+                                <div class="tooltip-content w-dropdown-toggle">
+                                  <div class="tooltip-i">i</div>
+                                </div>
+                                <nav class="tooltip-anchor top w-dropdown-list">
+                                  <div
+                                    data-cy="step5"
+                                    class="tooltip-wrapper _200"
+                                  >
+                                    <div class="tooltip-container _10">
+                                      <div class="relative">
+                                        Web design &amp; development created by
+                                        Alfred (he made this application site
+                                        &#129395;)<br />
+                                      </div>
+                                    </div>
+                                    <div class="tooltip-diamond bottom"></div>
+                                  </div>
+                                </nav>
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 9,000.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                Marketing Strategy &amp; Retainer
+                              </div>
+                              <div
+                                data-delay="0"
+                                data-hover="true"
+                                class="tooltip-dropdown inline w-dropdown"
+                              >
+                                <div class="tooltip-content w-dropdown-toggle">
+                                  <div class="tooltip-i">i</div>
+                                </div>
+                                <nav class="tooltip-anchor top w-dropdown-list">
+                                  <div
+                                    data-cy="step5"
+                                    class="tooltip-wrapper _200"
+                                  >
+                                    <div class="tooltip-container _10">
+                                      <div class="relative">
+                                        Service provided Internally, equivilant
+                                        of a $3,500/month retainer for three
+                                        months leading up to launch
+                                        (September&ndash;November), plus a
+                                        $2,000 upfront investment in analysis
+                                        and strategy.<br />
+                                      </div>
+                                    </div>
+                                    <div class="tooltip-diamond bottom"></div>
+                                  </div>
+                                </nav>
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                $ 12,500.00
+                              </div>
+                            </div>
+                          </div>
+                          <div class="table-row-3-col data-row wide feature">
+                            <div class="table-col data left">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-2"
+                                  >Total In-Kind Income/Expenses</strong
+                                >
+                              </div>
+                            </div>
+                            <div class="table-col">
+                              <div class="table-1---header---text data center">
+                                <strong class="bold-text-3">$ 33,911.00</strong>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-size-large text-align-center">
+                  These amounts are based on quotes we&rsquo;ve received,
+                  available upon request.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        data-w-id="7c0253d3-4a12-3ec2-8602-d728dcdcb356"
+        class="setion_timeline" style="display:none"
+      >
+        <div class="section-timeline-heading">
+          <div class="container-2">
+            <div class="padding-vertical-xlarge">
+              <div class="timeline-main_heading-wrapper">
+                <div class="margin-bottom-medium">
+                  <h2 class="heading-bold">
+                    Timeline: A Strategic Path to Development
+                  </h2>
+                </div>
+                <p class="paragraph-large">
+                  Our timeline follows three structured phases. This is to
+                  ensure Linus caters for a variety of conditions, resulting in
+                  a product that is built for actors whenever and wherever they
+                  need.<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-timeline">
+          <div class="container-2">
+            <div class="timeline_component">
+              <div class="timeline_progress">
+                <div class="timeline_progress-bar"></div>
+              </div>
+              <div
+                data-w-id="7c0253d3-4a12-3ec2-8602-d728dcdcb382"
+                class="timeline_item"
+              >
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb383-5f261ba3"
+                  class="timeline_left"
+                >
+                  <div class="timeline_date-text w-clearfix">
+                    <span class="timeline-date">May &ndash;July</span>Phase 1<br />
+                  </div>
+                </div>
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb386-5f261ba3"
+                  class="timeline_centre"
+                >
+                  <div class="timeline_circle"></div>
+                </div>
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb388-5f261ba3"
+                  class="timeline_right"
+                >
+                  <div class="margin-bottom-medium">
+                    <div class="timeline_text">
+                      Beta Testing &amp; Industry Validation
+                    </div>
+                  </div>
+                  <div class="margin-bottom-medium">
+                    <p class="text-colour-lightgrey">
+                      Our 33-actor beta group will test our proof of concept in
+                      real rehearsals, allowing us to refine responsiveness,
+                      pacing, and direction-taking. <br /><br />Brand strategy
+                      and public assets will go live.
+                    </p>
+                  </div>
+                  <div class="timeline_image-wrapper hide">
+                    <img
+                      width="480"
+                      sizes="(max-width: 479px) 100vw, 480px"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540d3_Image%201%20-%20Transparent.png"
+                      loading="lazy"
+                      srcset="
+                        https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540d3_Image%25201%2520-%2520Transparent-p-500.png 500w,
+                        https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540d3_Image%25201%2520-%2520Transparent-p-800.png 800w,
+                        https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540d3_Image%201%20-%20Transparent.png             960w
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                data-w-id="7c0253d3-4a12-3ec2-8602-d728dcdcb38e"
+                class="timeline_item"
+              >
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb38f-5f261ba3"
+                  class="timeline_left"
+                >
+                  <div class="timeline_date-text w-clearfix">
+                    <span class="timeline-date">July &ndash; December</span
+                    >Phase 2<br />
+                  </div>
+                </div>
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb392-5f261ba3"
+                  class="timeline_centre"
+                >
+                  <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                  <div class="margin-bottom-medium">
+                    <div class="timeline_text">
+                      AI Development &amp; Performance Optimisation<br />
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <p class="text-colour-lightgrey">
+                      Using our beta insights we will refine AI adaptability,
+                      timing, and interaction flow. Ethical safeguards and data
+                      security will be implemented to ensure Linus remains a
+                      trusted, actor-first tool.<br />
+                    </p>
+                  </div>
+                  <div class="timeline_image-wrapper hide">
+                    <img
+                      width="480"
+                      sizes="(max-width: 479px) 100vw, 480px"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540e2_Image%202.png"
+                      loading="lazy"
+                      srcset="
+                        https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540e2_Image%25202-p-500.png 500w,
+                        https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a7244540e2_Image%202.png         960w
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                data-w-id="7c0253d3-4a12-3ec2-8602-d728dcdcb3a1"
+                class="timeline_item"
+              >
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb3a2-5f261ba3"
+                  class="timeline_left"
+                >
+                  <div class="timeline_date-text w-clearfix">
+                    <span class="timeline-date">December &ndash; March</span
+                    >Phase 3<br />
+                  </div>
+                </div>
+                <div
+                  id="w-node-_7c0253d3-4a12-3ec2-8602-d728dcdcb3a5-5f261ba3"
+                  class="timeline_centre"
+                >
+                  <div class="timeline_circle"></div>
+                </div>
+                <div class="timeline_right">
+                  <div class="margin-bottom-medium">
+                    <div class="timeline_text">
+                      Public Launch &amp; Industry Integration<br />
+                    </div>
+                  </div>
+                  <div class="margin-bottom-xlarge">
+                    <p class="text-colour-lightgrey">
+                      Linus will launch across professional networks and
+                      industry partnerships, with a hypercare period for
+                      performance monitoring and rapid refinements.<br />
+                    </p>
+                  </div>
+                  <div class="timeline_image-wrapper margin-bottom-medium hide">
+                    <img
+                      width="480"
+                      loading="lazy"
+                      alt=""
+                      src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67d7b0a9e40825a72445410c_Image%203.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="overlay-fade-bottom"></div>
+              <div class="overlay-fade-top"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="7c0253d3-4a12-3ec2-8602-d728dcdcb451"
+          class="section-timeline-cta"
+        >
+          <div class="container-2">
+            <p class="text-colour-lightgrey text-align-center max-width-medium">
+              This rollout ensures Linus is built with actors, tested by actors,
+              and launched for actors.
+            </p>
+            <div class="padding-vertical-xlarge">
+              <div style="opacity: 0.25" class="timeline-main_heading-wrapper">
+                <div class="margin-bottom-medium">
+                  <div class="timeline_date-text">Full breakdown</div>
+                </div>
+              </div>
+              <div class="text-align-center">
+                <div class="chart-container">
+                  <div id="chartdiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section_who-we-are-2">
+        <div class="rl-page-padding">
+          <div class="max-width-large text-align-center margin-bottom-xlarge">
+            <h2 class="heading-huge margin-bottom-small">Who we are</h2>
+            <p class="text-align-left">
+              Some ideas don&rsquo;t belong to just one person. They hover,
+              waiting for the right people to bring them to life. Linus was one
+              of those ideas.
+            </p>
+          </div>
+          <div class="sectoin_transform-features">
+            <div class="container-large margin-bottom-large">
+              <div class="scroll-inner transform">
+                <div class="scroll-card transform about-us">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/CC_traced.png"
+                      alt=""
+                      class="full-image"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4">
+                        <strong>Callan&nbsp;Colley</strong>
+                      </h3>
+                      <div class="rich-text-block-2 w-richtext">
+                        <p class="text-size-large">
+                          At 18, Callan led R&amp;D for an accounting firm while
+                          pursuing a double degree in Geology &amp; Finance. A
+                          deeper calling brought him to NIDA, where he saw an
+                          industry in flux&mdash;self-taping was standard, yet
+                          actors weren&rsquo;t trained for it.
+                        </p>
+                        <p class="text-size-large">
+                          So, Callan created Actors Kit, providing self-taping
+                          solutions globally.</p>
+                      </div>
+                    </div>
+                    <div class="grow-background"></div>
+                  </div>
+                </div>
+                <div class="scroll-card transform about-us">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/AK_traced.png"
+                      alt=""
+                      class="full-image about"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4"><strong>Alfred Kouris</strong></h3>
+                    </div>
+                    <div class="grow-background"></div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large">
+                        Alfred excelled in both tech and the arts. By 19, he
+                        built a #1 Education App on the Australian App Store and
+                        scaled a digital agency while studying Commerce &amp;
+                        Theatre at Monash. At 21, he trained as an actor at
+                        NIDA.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-large">
+            <div class="padding-bottom">
+              <div class="max-width-large text-align-center">
+                <div class="rich-text-block about-us w-richtext">
+                  <p>
+                    These two NIDA&nbsp;Acting alumni, barely acquaintances, met
+                    by chance in a sauna, geeking out over business, tech, and
+                    the industry. They quickly realised they were both working
+                    on the same idea.
+                  </p>
+                  <p>&zwj;</p>
+                  <p>Instead of competing, they teamed up.</p>
+                  <p>&zwj;</p>
+                  <p>
+                    Together, we combine industry insight with cutting-edge
+                    innovation.
+                  </p>
+                  <p>&zwj;</p>
+                  <p>
+                    Callan understands actors&rsquo; challenges, while Alfred
+                    engineers scalable, actor-first solutions. Our shared
+                    background in performance and business bridges artistry and
+                    technology&mdash;ensuring every tool we create empowers
+                    actors.
+                  </p>
+                  <p>&zwj;</p>
+                  <p>
+                    We&rsquo;re not here to create ChatGPT in fancy dress,
+                    we&rsquo;re giving actors something real.
+                  </p>
+                  <p>&zwj;</p>
+                  <p class="bold-text">
+                    Linus isn&rsquo;t just our idea&mdash;it&rsquo;s our magnum
+                    opus for our community.
+                  </p>
+                  <p>&zwj;</p>
+                  <p>
+                    With the right backing, we&rsquo;ll turn this vision into
+                    reality, making seamless, intelligent rehearsal the new
+                    standard, for the new era.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_collaborators">
+        <div class="rl-page-padding">
+          <div class="max-width-large text-align-center margin-bottom-xlarge">
+            <h2 class="heading-huge margin-bottom-small">Our Collaborators</h2>
+            <p class="text-align-left">
+              We are working with casting directors, training institutions, and
+              industry leaders to ensure Linus meets professional standards and
+              becomes essential to how actors prepare.
+            </p>
+          </div>
+          <div
+            class="max-width-medium text-align-center margin-bottom-medium"
+          ></div>
+          <div class="sectoin_transform-features">
+            <div class="container-large">
+              <div class="margin-bottom margin-xsmall">
+                <h3 class="font-medium">
+                  Built alongside the industries most trusted voices
+                </h3>
+              </div>
+              <div class="scroll-inner transform margin-bottom-medium">
+                <div class="scroll-card transform collarboator">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/JB.png"
+                      alt=""
+                      class="full-image"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4"><strong>John Bashford</strong></h3>
+                      <h3 class="heading-4">
+                        <strong class="about-title"
+                          >Head of Acting, NIDA</strong
+                        >
+                      </h3>
+                      <div class="rich-text-block-2 w-richtext">
+                        <p class="text-size-large">
+                          <strong
+                            >Extending actor training beyond drama
+                            school</strong
+                          >
+                        </p>
+                      </div>
+                    </div>
+                    <div class="grow-background"></div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large">
+                        Exploring how Linus can equip graduates with an
+                        industry-ready rehearsal tool, keeping them sharp,
+                        prepared, and adaptable.
+                      </p>
+                    </div>
+                    <div class="builder_feature-top fixed-w quote">
+                      <p
+                        class="text-color-darkgrey text-align-left text-italic"
+                      >
+                        &ldquo;Linus provides a vital solution&mdash;ensuring
+                        actors maintain rehearsal practice and professional
+                        preparedness. With the right R&amp;D, it could become a
+                        standard resource across training institutions.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="scroll-card transform collarboator">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/SP.png"
+                      alt=""
+                      class="full-image"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4">
+                        <strong>Stephanie Pringle</strong>
+                      </h3>
+                      <h3 class="heading-4">
+                        <strong class="about-title"
+                          >Casting Director, Casting Guild Australia Exec
+                          Committee &ndash; AI &amp; New Media</strong
+                        >
+                      </h3>
+                    </div>
+                    <div class="grow-background"></div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large">
+                        <strong
+                          >Championing ethical AI to meet casting
+                          standards</strong
+                        >
+                      </p>
+                    </div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large">
+                        Ensuring Linus is actor-first, casting-friendly, and
+                        shaping the industry we want&mdash;not the one we fear.
+                      </p>
+                    </div>
+                    <div class="builder_feature-top fixed-w quote">
+                      <p
+                        class="text-color-darkgrey text-align-left text-italic"
+                      >
+                        "Most AI tools for actors? Rubbish. But Linus?
+                        It&rsquo;s built by people who understand what actors
+                        need. When actors step in front of the camera already in
+                        the zone, we get better tapes, better performances, and
+                        better casting decisions."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-inner transform">
+                <div class="scroll-card transform collarboator">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/KW.png"
+                      alt=""
+                      class="full-image"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4"><strong>Kip Williams</strong></h3>
+                      <h3 class="heading-4">
+                        <strong class="about-title"
+                          >Director, Writer, Former Artistic Director,
+                          STC</strong
+                        >
+                      </h3>
+                    </div>
+                    <div class="grow-background"></div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large text-align-center">
+                        <strong>Integrating Linus into theatre</strong>
+                      </p>
+                      <p>&zwj;</p>
+                      <p class="text-size-large">
+                        Advocating for Linus in live rehearsal spaces, helping
+                        actors rehearse smarter and innovate how technology
+                        supports the creative process.
+                      </p>
+                    </div>
+                    <div class="builder_feature-top fixed-w quote">
+                      <p
+                        class="text-color-darkgrey text-align-left text-italic"
+                      >
+                        &ldquo;Supporting Linus fosters an artistic culture that
+                        embraces both risk and preparation, tradition and
+                        reinvention. I support its development.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="scroll-card transform collarboator">
+                  <div class="content-wrapper-2">
+                    <img
+                      loading="lazy"
+                      src="images/BS.png"
+                      alt=""
+                      class="full-image"
+                    />
+                    <div class="text-wrapper">
+                      <h3 class="heading-4"><strong>Bruce Spence</strong></h3>
+                      <h3 class="heading-4">
+                        <strong class="about-title"
+                          >Actor, Former Equity VP, Chair, Actors Benevolent
+                          Fund 2019&ndash;2023</strong
+                        >
+                      </h3>
+                    </div>
+                    <div class="grow-background"></div>
+                    <div class="rich-text-block-2 w-richtext">
+                      <p class="text-size-large text-align-center">
+                        <strong>Making Linus accessible to all actors</strong>
+                      </p>
+                      <p>&zwj;</p>
+                      <p class="text-size-large">
+                        Working with MEAA and The Actors Benevolent Fund to
+                        bring Linus to those who need it most, ensuring equal
+                        access to professional rehearsal tools.
+                      </p>
+                    </div>
+                    <div class="builder_feature-top fixed-w quote">
+                      <p
+                        class="text-color-darkgrey text-align-left text-italic"
+                      >
+                        &ldquo;The work behind Linus is impressive. New
+                        technology should make actors&rsquo; lives easier.
+                        Callan and Alfred understand that better than
+                        anyone.&rdquo;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-large">
+            <div class="padding-bottom padding-xxhuge"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section_why-nida">
+        <div class="rl-page-padding">
+          <div class="margin-bottom-xlarge">
+            <div class="max-width-large text-align-center margin-bottom-xlarge">
+              <h2 class="heading-huge margin-bottom-small">
+                Why&nbsp;Linus x Eleven Labs?
+              </h2>
+              <p class="text-align-left">
+                Eleven Labs baking Linus would be like Spielberg backing a new
+                camera—it tells the world this isn’t just another AI gimmick.
+                It’s a serious, actor-first innovation, shaping the future of
+                rehearsal through ethically built, human-centered AI voice
+                technology.
+              </p>
+            </div>
+            <div class="max-width-large text-align-center">
+              <div class="padding-bottom padding-large">
+                <div class="why-nida-features margin-bottom-xlarge">
+                  <div class="rich-text-block w-richtext">
+                    <p>
+                      &zwj;<strong>Future of Voice, Fast-Tracked</strong
+                      ><br />With Eleven Labs’ backing, we can accelerate Linus’
+                      development, bringing next-generation, emotionally
+                      intelligent voice technology to actors everywhere.
+                    </p>
+                    <p>
+                      &zwj;<br /><strong>Linus doesn’t just use voice AI, it sets a new benchmark for how voice technology can empower performance, creativity, and human connection.
+
+                    </p>
+                    <p>&zwj;<strong>&zwj;</strong></p>
+                    <p>
+                      <strong>Instant Legitimacy</strong><br />With Eleven Labs support, Linus isn’t just an idea—it’s a bold, industry-backed innovation. This endorsement gives us the credibility to redefine how actors prepare and rehearse. Together, we show the industry what actor-first AI should look like.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="margin-bottom margin-bottom-xlarge">
+              <div id="cards" class="investor-grid contained single">
+                <div
+                  data-w-id="56f73df0-4a07-b923-556b-d9ed09f5aad7"
+                  style="opacity: 0"
+                  class="card"
+                >
+                  <div class="card-content">
+                    <div class="content-wrapper-3">
+                      <div class="heading-large">
+                        With the Eleven Labs support, Linus empowers a new generation of actors—more connected, confident, and prepared to lead.<br />
+                      </div>
+                      <div class="heading-large accent">
+                        The future of performance begins now.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="explainer-container">
+              <div class="explainer-image-container">
+                <img
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dfbde6f00950e5f0eafb3c_bruce.png"
+                  loading="lazy"
+                  sizes="(max-width: 1170px) 100vw, 1170px"
+                  srcset="
+                    https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dfbde6f00950e5f0eafb3c_bruce-p-500.png   500w,
+                    https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dfbde6f00950e5f0eafb3c_bruce-p-800.png   800w,
+                    https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dfbde6f00950e5f0eafb3c_bruce-p-1080.png 1080w,
+                    https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67dfbde6f00950e5f0eafb3c_bruce.png        1170w
+                  "
+                  alt=""
+                  class="explainer-image"
+                />
+              </div>
+              <div class="explainer-image-container">
+                <img
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67df4cd9a3db54e920ae94d4_2.png"
+                  loading="lazy"
+                  alt=""
+                  class="explainer-image"
+                />
+              </div>
+              <div class="explainer-image-container">
+                <img
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67df4cd9af1e86d24472b862_3.png"
+                  loading="lazy"
+                  alt=""
+                  class="explainer-image"
+                />
+              </div>
+              <div class="explainer-image-container">
+                <img
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67df4cd951013d950e013b42_4.png"
+                  loading="lazy"
+                  alt=""
+                  class="explainer-image"
+                />
+              </div>
+              <div class="explainer-image-container">
+                <img
+                  src="https://cdn.prod.website-files.com/67b354a94f54fe7316701d41/67df4cd922d52b417bdb0522_5.png"
+                  loading="lazy"
+                  alt=""
+                  class="explainer-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script
+      src="script1.js"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script2.js" type="text/javascript"></script>
+    <script src="script3.js" type="text/javascript"></script>
+    <script src="script4.js" type="text/javascript"></script>
+    <script src="extras.js" type="text/javascript"></script>
+  </body>
+</html>
