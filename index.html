@@ -158,15 +158,14 @@
                     action="https://assets.mailerlite.com/jsonp/1193374/forms/157887373400606534/subscribe" data-code=""
                     method="post">
                     <input class="field w-input" maxlength="256" aria-label="First Name" aria-required="true"
-                      type="text" name="fields[firstname]" placeholder="First Name" autocomplete="given-name"
-                      required="">
+                      type="text" name="fields[name]" placeholder="First Name" autocomplete="given-name" required="">
                     <input class="field w-input" maxlength="256" aria-label="Last name" aria-required="true" type="text"
-                      name="fields[lastname]" placeholder="Last name" autocomplete="family-name" required="">
+                      name="fields[last_name]" placeholder="Last name" autocomplete="family-name" required="">
                     <input class="field w-input" maxlength="256" aria-label="email" aria-required="true" type="email"
                       name="fields[email]" placeholder="Email" autocomplete="email" required="">
 
                     <label class="ml-form-label">How often do you work on scripts?</label>
-                    <select class="field w-input" name="fields[frequency]" required="">
+                    <select class="field w-input" name="fields[script_frequency]" required="">
                       <option value="">Select an option</option>
                       <option value="Daily">Daily</option>
                       <option value="Weekly">Weekly</option>
@@ -180,11 +179,12 @@
                       <label class="ml-form-label">Which devices do you use?</label>
                       <div class="ml-form-field-row">
                         <label class="ml-form-checkbox">
-                          <input type="checkbox" name="fields[devices][]" value="iOS (iPhone / iPad)">
+                          <input type="checkbox" name="fields[which_device_do_you_use][]" value="iOS (iPhone / iPad)">
                           <span class="ml-form-checkbox-label">iOS (iPhone / iPad)</span>
                         </label>
                         <label class="ml-form-checkbox">
-                          <input type="checkbox" name="fields[devices][]" value="Android (Samsung / Google)">
+                          <input type="checkbox" name="fields[which_device_do_you_use][]"
+                            value="Android (Samsung / Google)">
                           <span class="ml-form-checkbox-label">Android (Samsung / Google)</span>
                         </label>
                       </div>
