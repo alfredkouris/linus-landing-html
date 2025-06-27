@@ -20,6 +20,12 @@
         formContainer.style.display = 'none';
         successContainer.style.display = 'block';
 
+        // Hide any error messages
+        const errorContainer = document.getElementById('form-error');
+        if (errorContainer) {
+          errorContainer.style.display = 'none';
+        }
+
         // Hide hero content elements
         const heroTitle = document.querySelector('.hero_title');
         const heroText = document.querySelector('.hero_text');
@@ -67,9 +73,29 @@
       }
     };
 
+    // Form error message functions
+    function showError(message) {
+      const errorContainer = document.getElementById('form-error');
+      const errorText = errorContainer.querySelector('.error-text');
+
+      errorText.textContent = message;
+      errorContainer.style.display = 'block';
+
+      // Scroll error into view
+      errorContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideError() {
+      const errorContainer = document.getElementById('form-error');
+      errorContainer.style.display = 'none';
+    }
+
     // reCAPTCHA Enterprise callback function
     function onClick(e) {
       e.preventDefault();
+
+      // Clear any existing errors
+      hideError();
 
       const form = document.querySelector('.ml-block-form');
       const submitButton = form.querySelector('.button');
@@ -83,7 +109,7 @@
       const frequency = form.querySelector('select[name="fields[script_frequency]"]').value;
 
       if (!email || !firstname || !lastname || !frequency || !email.includes('@')) {
-        alert('Please fill in all required fields.');
+        showError('Please fill in all required fields with valid information.');
         return;
       }
 
@@ -118,7 +144,7 @@
             })
             .catch(error => {
               console.error('Error:', error);
-              alert('Something went wrong. Please try again.');
+              showError('Something went wrong. Please try again.');
             })
             .finally(() => {
               // Reset loading state
@@ -130,7 +156,7 @@
             });
         } catch (error) {
           console.error('reCAPTCHA error:', error);
-          alert('reCAPTCHA verification failed. Please try again.');
+          showError('reCAPTCHA verification failed. Please try again.');
           // Reset loading state
           if (submitButton && submitText && loader) {
             submitButton.disabled = false;
@@ -140,6 +166,17 @@
         }
       });
     }
+
+    // Clear error messages when user starts typing
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.ml-block-form');
+      const formFields = form.querySelectorAll('input, select');
+
+      formFields.forEach(field => {
+        field.addEventListener('input', hideError);
+        field.addEventListener('change', hideError);
+      });
+    });
 
 
   </script>
@@ -213,6 +250,10 @@
                           <span class="ml-form-checkbox-label">Android (Samsung / Google)</span>
                         </label>
                       </div>
+                    </div>
+
+                    <div class="form-error-message" id="form-error" style="display: none;">
+                      <p class="error-text"></p>
                     </div>
 
                     <input type="hidden" name="ml-submit" value="1">
