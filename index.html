@@ -10,6 +10,7 @@
   <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127" async></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script>
     window.ml_webform_success_19899947 = function () {
       const formContainer = document.querySelector('.ml-form-embedBody');
@@ -66,55 +67,80 @@
       }
     };
 
+    // reCAPTCHA callback function
+    function onSubmit(token) {
+      const form = document.querySelector('.ml-block-form');
+      const formData = new FormData(form);
+      const submitButton = form.querySelector('.button');
+      const submitText = submitButton.querySelector('span');
+      const loader = submitButton.querySelector('.loader');
+
+      // Add reCAPTCHA token to form data
+      formData.append('g-recaptcha-response', token);
+
+      // Show loading state
+      if (submitButton && submitText && loader) {
+        submitButton.disabled = true;
+        submitText.style.display = 'none';
+        loader.style.display = 'inline-block';
+      }
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+        .then(response => {
+          // Since we're using no-cors, we can't actually check the response
+          // Instead, we'll check if the form data looks valid
+          const email = formData.get('fields[email]');
+          const firstname = formData.get('fields[name]');
+          const lastname = formData.get('fields[last_name]');
+          const frequency = formData.get('fields[script_frequency]');
+
+          if (email && firstname && lastname && frequency && email.includes('@')) {
+            window.ml_webform_success_19899947();
+          } else {
+            throw new Error('Invalid form data');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Something went wrong. Please try again.');
+        })
+        .finally(() => {
+          // Reset loading state and reCAPTCHA
+          if (submitButton && submitText && loader) {
+            submitButton.disabled = false;
+            submitText.style.display = 'inline';
+            loader.style.display = 'none';
+          }
+          // Reset reCAPTCHA
+          if (typeof grecaptcha !== 'undefined') {
+            grecaptcha.reset();
+          }
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.querySelector('.ml-block-form');
 
+      // Prevent default form submission since reCAPTCHA will handle it
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const formData = new FormData(form);
-        const submitButton = form.querySelector('.button');
-        const submitText = submitButton.querySelector('span');
-        const loader = submitButton.querySelector('.loader');
+        // Validate form fields before triggering reCAPTCHA
+        const email = form.querySelector('input[name="fields[email]"]').value;
+        const firstname = form.querySelector('input[name="fields[name]"]').value;
+        const lastname = form.querySelector('input[name="fields[last_name]"]').value;
+        const frequency = form.querySelector('select[name="fields[script_frequency]"]').value;
 
-        // Show loading state
-        if (submitButton && submitText && loader) {
-          submitButton.disabled = true;
-          submitText.style.display = 'none';
-          loader.style.display = 'inline-block';
+        if (!email || !firstname || !lastname || !frequency || !email.includes('@')) {
+          alert('Please fill in all required fields.');
+          return;
         }
 
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors'
-        })
-          .then(response => {
-            // Since we're using no-cors, we can't actually check the response
-            // Instead, we'll check if the form data looks valid
-            const email = formData.get('fields[email]');
-            const firstname = formData.get('fields[name]');
-            const lastname = formData.get('fields[last_name]');
-            const frequency = formData.get('fields[script_frequency]');
-
-            if (email && firstname && lastname && frequency && email.includes('@')) {
-              window.ml_webform_success_19899947();
-            } else {
-              throw new Error('Invalid form data');
-            }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            alert('Something went wrong. Please try again.');
-          })
-          .finally(() => {
-            // Reset loading state
-            if (submitButton && submitText && loader) {
-              submitButton.disabled = false;
-              submitText.style.display = 'inline';
-              loader.style.display = 'none';
-            }
-          });
+        // If validation passes, reCAPTCHA will be triggered automatically
       });
     });
   </script>
@@ -192,7 +218,9 @@
 
                     <input type="hidden" name="ml-submit" value="1">
                     <input type="hidden" name="anticsrf" value="true">
-                    <button type="submit" class="button w-button">
+                    <button type="submit" class="button w-button g-recaptcha"
+                      data-sitekey="6LfKURIqAAAAAH5bCwmXXxjyOJGqKOGxJlOjNvxr" data-callback="onSubmit"
+                      data-action="submit">
                       <span>Join the waitlist</span>
                       <div class="loader" style="display: none"></div>
                     </button>
