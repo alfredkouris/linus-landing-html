@@ -3450,6 +3450,11 @@ select {
     overflow: hidden;
     border-radius: 24px;
     background: transparent;
+    background-color: transparent;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .app-mockup.has-video.is-mobile {
@@ -3464,12 +3469,26 @@ select {
     display: block;
     border-radius: 24px;
     background: transparent;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
   }
 
-  /* Ensure no black background on video containers */
+  /* iOS Safari specific fixes */
+  .app-mockup.is-mobile,
   .app-mockup.has-video.is-mobile,
   .background-video.is-mobile {
     background: transparent !important;
+    background-color: transparent !important;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+
+  /* Force transparent background on all video elements */
+  .app-mockup.is-mobile video,
+  .app-mockup.has-video.is-mobile video,
+  .background-video.is-mobile video {
+    background: transparent !important;
+    background-color: transparent !important;
   }
 }
 
