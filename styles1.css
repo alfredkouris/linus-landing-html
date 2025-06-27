@@ -8,7 +8,7 @@ body {
   margin: 0 auto !important;
   max-width: 1400px;
   /* background-color: var(--brand-2); */
-  background: linear-gradient(90deg, #ffc4f5 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #f09637 0%, #ffffff 100%);
   background-size: 200% 200%;
   animation: gradient-move 12s ease-in-out infinite;
 }
