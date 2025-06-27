@@ -93,9 +93,9 @@
             // Since we're using no-cors, we can't actually check the response
             // Instead, we'll check if the form data looks valid
             const email = formData.get('fields[email]');
-            const firstname = formData.get('fields[firstname]');
-            const lastname = formData.get('fields[lastname]');
-            const frequency = formData.get('fields[frequency]');
+            const firstname = formData.get('fields[name]');
+            const lastname = formData.get('fields[last_name]');
+            const frequency = formData.get('fields[script_frequency]');
 
             if (email && firstname && lastname && frequency && email.includes('@')) {
               window.ml_webform_success_19899947();
