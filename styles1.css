@@ -3469,8 +3469,16 @@ select {
     display: block;
     border-radius: 24px;
     background: transparent;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-    mask-image: radial-gradient(white, black);
+    mix-blend-mode: multiply;
+    filter: contrast(1.1) brightness(1.1);
+  }
+
+  /* iOS Safari specific video fixes */
+  @supports (-webkit-appearance: none) {
+    .app-mockup.is-mobile video {
+      mix-blend-mode: screen;
+      filter: contrast(1.2) brightness(0.9) saturate(1.1);
+    }
   }
 
   /* iOS Safari specific fixes */
