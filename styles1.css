@@ -2990,6 +2990,60 @@ select {
   box-shadow: 0 0 0 2px rgba(248, 144, 58, 0.3);
 }
 
+/* Radio button styling that matches checkbox styling */
+.ml-form-checkbox input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.ml-form-checkbox input[type="radio"] + .ml-form-checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.ml-form-checkbox input[type="radio"] + .ml-form-checkbox-label:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.ml-form-checkbox input[type="radio"]:checked + .ml-form-checkbox-label:before {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: currentColor;
+}
+
+.ml-form-checkbox input[type="radio"]:checked + .ml-form-checkbox-label:after {
+  opacity: 1;
+}
+
+.ml-form-checkbox input[type="radio"]:checked ~ .ml-form-checkbox-label {
+  color: currentColor;
+}
+
+.ml-form-checkbox input[type="radio"]:focus + .ml-form-checkbox-label:before {
+  box-shadow: 0 0 0 2px rgba(248, 144, 58, 0.3);
+}
+
 @media (max-width: 900px) {
   .info-steps-3col,
   .info-steps-2col {
